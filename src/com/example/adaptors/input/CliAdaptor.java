@@ -1,6 +1,6 @@
-package main.java.com.example.adaptors.input;
+package com.example.adaptors.input;
 
-import main.java.com.example.core.ports.input.GreetingUseCase;
+import com.example.core.ports.input.GreetingUseCase;
 
 public class CliAdaptor {
     private final GreetingUseCase greetingUseCase;

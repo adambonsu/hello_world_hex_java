@@ -1,4 +1,4 @@
-package main.java.com.example.core.domain;
+package com.example.core.domain;
 
 public class Greeting {
     private final String message;

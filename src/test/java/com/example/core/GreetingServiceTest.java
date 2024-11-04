@@ -1,8 +1,8 @@
 package test.java.com.example.core;
 
-import main.java.com.example.core.GreetingService;
-import main.java.com.example.core.domain.Greeting;
-import main.java.com.example.core.ports.output.GreetingRepository;
+import com.example.core.GreetingService;
+import com.example.core.domain.Greeting;
+import com.example.core.ports.output.GreetingRepository;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

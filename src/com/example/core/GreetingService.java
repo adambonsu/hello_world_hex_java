@@ -1,8 +1,8 @@
-package main.java.com.example.core;
+package com.example.core;
 
-import main.java.com.example.core.domain.Greeting;
-import main.java.com.example.core.ports.input.GreetingUseCase;
-import main.java.com.example.core.ports.output.GreetingRepository;
+import com.example.core.domain.Greeting;
+import com.example.core.ports.input.GreetingUseCase;
+import com.example.core.ports.output.GreetingRepository;
 
 public class GreetingService implements GreetingUseCase {
     private final GreetingRepository greetingRepository;

@@ -1,10 +1,10 @@
-package main.java.com.example;
+package com.example;
 
-import main.java.com.example.adaptors.input.CliAdaptor;
-import main.java.com.example.adaptors.output.InMemoryGreetingRepository;
-import main.java.com.example.core.GreetingService;
-import main.java.com.example.core.ports.input.GreetingUseCase;
-import main.java.com.example.core.ports.output.GreetingRepository;
+import com.example.adaptors.input.CliAdaptor;
+import com.example.adaptors.output.InMemoryGreetingRepository;
+import com.example.core.GreetingService;
+import com.example.core.ports.input.GreetingUseCase;
+import com.example.core.ports.output.GreetingRepository;
 
 public class Application {
     public static void main(String[] args) {

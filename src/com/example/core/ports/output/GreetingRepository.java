@@ -1,4 +1,4 @@
-package main.java.com.example.core.ports.output;
+package com.example.core.ports.output;
 
 public interface GreetingRepository {
     String getGreetingTempate();

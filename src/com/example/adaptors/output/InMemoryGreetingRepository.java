@@ -1,6 +1,6 @@
-package main.java.com.example.adaptors.output;
+package com.example.adaptors.output;
 
-import main.java.com.example.core.ports.output.GreetingRepository;
+import com.example.core.ports.output.GreetingRepository;
 
 public class InMemoryGreetingRepository implements GreetingRepository {
 
