@@ -12,6 +12,7 @@ public class Application {
         GreetingUseCase greetingUseCase = new GreetingService(greetingRepository);
         CliAdaptor cliAdaptor = new CliAdaptor(greetingUseCase);
 
-        cliAdaptor.greet("World");
+        String name = args.length > 0 ? args[0] : "World";
+        cliAdaptor.greet(name);
     }
 }
