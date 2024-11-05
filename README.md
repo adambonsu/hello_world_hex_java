@@ -76,13 +76,36 @@ mvn spotbugs:check
 
 ```
 
-### Functional Tests
-To run the tests, use the following command:
+### Running Functional Tests
+
+This project includes functional tests using TestNG. To run the tests:
 ```bash
-mvn test
+mvn clean test
 
 ```
-You can also use your preferred IDE to develop and run the project.
+This will compile the code and run all TestNG tests, including the functional tests.
+
+The test results will be available in the `target/surefire-reports` directory.
+
+### Functional Test Structure
+
+The functional tests are located in:
+`src/test/java/com/example/functional/HelloWorldFunctionalTest.java`
+
+This test class simulates the output of the Hello World application and verifies it against the expected output.
+
+### Customizing Functional Tests
+
+To add more functional tests:
+
+1. Create new test methods in the `HelloWorldFunctionalTest.java` file.
+2. Implement the `getHelloWorldOutput()` method to actually run your application and capture its output.
+3. Add any new test classes to the `testng.xml` file located in `src/test/java/com/example/testng.xml`.
+
+
+## CI/CD
+The project is configured to run these tests automatically on GitHub Actions. Every push and pull request will trigger the test suite. You can view the results in the "Actions" tab of the GitHub repository.
+
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/adambonsu/hello_world_hex_java. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
