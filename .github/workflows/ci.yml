@@ -11,19 +11,12 @@ concurrency:
     group: ci ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
     cancel-in-progress: true
 jobs:
-    static-code-analysis:
-        permissions:
-            contents: read
-        secrets: inherit
-        uses: ./.github/workflows/static-code-analysis.yml
     functional-tests:
-        needs: static-code-analysis
         permissions:
             contents: read
         secrets: inherit
         uses: ./.github/workflows/functional-tests.yml
     security-tests:
-        needs: static-code-analysis
         permissions:
             contents: read
         secrets: inherit

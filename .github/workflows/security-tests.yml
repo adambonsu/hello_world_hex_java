@@ -25,4 +25,8 @@ jobs:
               with:
                   name: security-test-report
                   path: target/spotbugsXml.xml
+            - name: Analyse Results
+              uses: jwgmeligmeyling/spotbugs-github-action@master
+              with:
+                path: '**/spotbugsXml.xml'
           
