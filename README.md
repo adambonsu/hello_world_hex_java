@@ -94,6 +94,7 @@ The functional tests are located in:
 
 This test class simulates the output of the Hello World application and verifies it against the expected output.
 
+
 ### Customizing Functional Tests
 
 To add more functional tests:
@@ -103,8 +104,32 @@ To add more functional tests:
 3. Add any new test classes to the `testng.xml` file located in `src/test/java/com/example/testng.xml`.
 
 
-## CI/CD
+## CI/CD Functional Test Integration
 The project is configured to run these tests automatically on GitHub Actions. Every push and pull request will trigger the test suite. You can view the results in the "Actions" tab of the GitHub repository.
+
+
+
+### Running Security Tests
+
+This project includes security tests using spotbugs with the FindSecBugs plugin. To run the tests:
+```bash
+mvn spotbugs:check
+
+```
+This will run SpotBugs and fail the build if any security issues are found.
+
+To generate an HTML report, use:
+```bash
+mvn spotbugs:gui
+
+```
+This will create an HTML report in the `target/spotbugsXml.xml` file.
+
+### CI/CD Security Test Integration
+
+This project is configured to run SpotBugs automatically on GitHub Actions. Every push and pull request will trigger the security analysis. You can view the results in the "Actions" tab of the GitHub repository.
+
+If any security issues are found, the SpotBugs report will be uploaded as an artifact and can be downloaded for further analysis.
 
 
 ## Contributing
