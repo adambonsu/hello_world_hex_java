@@ -1,0 +1,28 @@
+name: SecurityTests
+run-name: "Security Tests run by @${{ github.actor }}, event: ${{ github.event_name }}"
+on:
+    workflow_call:
+    workflow_dispatch:
+
+jobs:
+    linting:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Set up JDK
+              uses: actions/setup-java@v4
+              with:
+                  java-version: '11'
+                  distribution: 'temurin'
+            - name: Security Tests
+              run: mvn spotbugs:check
+            - name: Upload Security Report
+              if: failure()
+              uses: actions/upload-artifact@v4
+              with:
+                  name: security-test-report
+                  path: target/spotbugsXml.xml
+          

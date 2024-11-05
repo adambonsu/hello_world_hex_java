@@ -1,0 +1,22 @@
+name: FunctionalTests
+run-name: "Functional Tests run by @${{ github.actor }}, event: ${{ github.event_name }}"
+on:
+    workflow_call:
+    workflow_dispatch:
+
+jobs:
+    linting:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Set up JDK
+              uses: actions/setup-java@v4
+              with:
+                  java-version: '11'
+                  distribution: 'temurin'
+            - name: Functional Tests
+              run: mvn clean test
+          
