@@ -1,6 +1,6 @@
 # Hello World Hex Java
 
-[![Build Status](https://travis-ci.org/adambonsu/hello_world_hex_java.svg?branch=main)](https://travis-ci.org/adambonsu/hello_world_hex_java)
+[![Build Status](https://github.com/adambonsu/hello_world_hex_java/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/adambonsu/hello_world_hex_java/actions/workflows/ci-cd.yml)
 
 Hello World Hex Java is a simple Java project that demonstrates the principles of Hexagonal Architecture (also known as Ports and Adapters) using a "Hello World" example.
 
@@ -67,6 +67,16 @@ Benefits of this architecture include:
 
 
 ## Development
+
+### Static Tests
+SpotBugs is a static code analysis tool for Java projects. SpotBugs is the successor to FindBugs and is widely used in the Java community.
+To run SpotBugs locally, use the following Maven command:
+```bash
+mvn spotbugs:check
+
+```
+
+### Functional Tests
 To run the tests, use the following command:
 ```bash
 mvn test
