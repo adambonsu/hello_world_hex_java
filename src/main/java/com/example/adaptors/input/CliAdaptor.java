@@ -10,7 +10,7 @@ public class CliAdaptor {
     }
 
     public void greet(String name) {
-        System.out.println(greetingUseCase.sayHello(name).getMessage());
+        System.out.println(greetingUseCase.greet(name).getMessage());
     }
     
 }

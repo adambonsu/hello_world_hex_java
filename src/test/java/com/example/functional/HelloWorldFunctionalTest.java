@@ -18,10 +18,10 @@ public class HelloWorldFunctionalTest {
     }
 
     private String getHelloWorldOutput() {
-        GreetingRepository greetingRepository = () -> "Hello %s";
+        GreetingRepository greetingRepository = () -> "Hello";
         GreetingService service = new GreetingService(greetingRepository);
 
-        Greeting greeting = service.sayHello("World");
+        Greeting greeting = service.greet("World");
         return greeting.getMessage();
     }
     

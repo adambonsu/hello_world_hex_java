@@ -44,7 +44,7 @@ After building the project, you can run the application using:
 java -jar target/helloworldhexjava-1.0-SNAPSHOT.jar
 
 ```
-By default, this will output: “Hello, World!”
+By default, this will output: “Hello World”
 To greet a specific name, you can pass it as a command-line argument:
 ```bash
 java -jar target/helloworldhexjava-1.0-SNAPSHOT.jar Makeda

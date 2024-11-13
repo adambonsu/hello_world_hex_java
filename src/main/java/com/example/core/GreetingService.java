@@ -12,9 +12,9 @@ public class GreetingService implements GreetingUseCase {
     }
 
     @Override
-    public Greeting sayHello(String name) {
-        String template = greetingRepository.getGreetingTempate();
-        return new Greeting(String.format(template, name));
+    public Greeting greet(String name) {
+        String greeting = greetingRepository.getGreeting();
+        return new Greeting( greeting + " " + name);
     }
     
 }
